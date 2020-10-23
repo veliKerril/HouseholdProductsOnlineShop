@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Список всех продуктов</h1>
+	
+	{% if good_list %}
+    
+    <ul>
+      {% for good in good_list %}
+      <li>
+        <a href="{{ good.get_absolute_url }}">{{ good.name }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    
+	{% else %}
+      <p>Почему у тебя пустой список</p>
+    {% endif %} 
+	
+	
+{% endblock %}

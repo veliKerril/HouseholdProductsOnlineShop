@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+	
+	<h1>Список найденных продуктов</h1>
+	
+	{% if good_list %}
+    
+    <ul>
+      {% for good in good_list %}
+      <li>
+        <a href="{{ good.get_absolute_url }}">{{ good.name }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    
+	{% else %}
+      <p>Подходящих вариантов нет</p>
+	  <a href="{% url 'find' %}">Вернуться к поиску</a>
+    {% endif %} 
+
+{% endblock %}

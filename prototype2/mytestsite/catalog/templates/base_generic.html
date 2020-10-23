@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  {% block title %}<title>Все для дома</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Добавление дополнительного статического CSS файла -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-2">
+      {% block sidebar %}
+      <ul class="sidebar-nav">
+          <li><a href="{% url 'index' %}">Домашняя страница</a></li>
+          <li><a href="{% url 'goods' %}">Все товары</a></li>
+          <li><a href="{% url 'categories' %}">Все категории</a></li>
+          <li><a href="{% url 'manufacturers' %}">Все производители</a></li>
+		  <li><a href="{% url 'find' %}">Поиск</a></li>
+		  <li><a href="{% url 'favorites' %}">Избранное</a></li>
+          <li><a href="{% url 'basket' %}">Корзина</a></li>
+          <li><a href="{% url 'contacts' %}">Контакты</a></li>
+		  <li><a href="{% url 'register' %}">Зарегистрироваться</a></li>
+		  <li><a href="{% url 'login' %}">Аутификация</a></li>
+		  <li><a href="{% url 'logout' %}">Выйти из учетной записи</a></li>
+      </ul>
+     {% endblock %}
+      </div>
+      <div class="col-sm-10 ">
+      {% block content %}{% endblock %}
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

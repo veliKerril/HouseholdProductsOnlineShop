@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Список всех категорий</h1>
+	
+	{% if category_list %}
+    
+    <ul>
+      {% for category in category_list %}
+      <li>
+        <a href="{{ category.get_absolute_url }}">{{ category.name }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    
+	{% else %}
+      <p>Почему же пустой список</p>
+    {% endif %} 
+	
+{% endblock %}

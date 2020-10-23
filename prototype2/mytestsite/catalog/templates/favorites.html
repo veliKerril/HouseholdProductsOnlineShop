@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Список избранных товаров</h1>
+	
+	{% if user.is_authenticated %}
+		<li>Избранные товары пользователя: {{ user.get_username }}</li> 
+    {% else %}
+		<a href="{% url 'login' %}">Пожалуйста, авторизуйтесь</a>  
+    {% endif %}
+	
+{% endblock %}

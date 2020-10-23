@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Корзина</h1>
+
+	{% if user.is_authenticated %}
+     <li>Коризна пользователя: {{ user.get_username }}</li> 
+   {% else %}
+     <a href="{% url 'login' %}">Пожалуйста, авторизуйтесь</a>  
+   {% endif %} 
+
+{% endblock %}

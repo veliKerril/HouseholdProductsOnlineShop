@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+	
+	<h1>Поиск</h1>
+	
+	<form action="{% url 'search_goods' %}" methon = "get">
+		<label for="search_good">Введите нужный товар: </label>
+		<input id="search_good" type="text" name="search_good">
+		<input type="submit" value="Найти!">
+	</form>
+
+{% endblock %}

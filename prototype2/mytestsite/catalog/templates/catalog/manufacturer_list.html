@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Список всех производителей</h1>
+	
+	{% if manufacturer_list %}
+    
+    <ul>
+      {% for manufacturer in manufacturer_list %}
+      <li>
+        <a href="{{ manufacturer.get_absolute_url }}">{{ manufacturer.name }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    
+	{% else %}
+      <p>Почему у тебя тупая сука пустой список</p>
+    {% endif %} 
+	
+{% endblock %}
