@@ -1,8 +1,0 @@
-{% extends "shop/base.html" %}
-
-{% block content %}
-    <h1>Список всех продуктов</h1>
-        {% for product in products %}
-                <br><a href="{{ product.get_absolute_url }}">• {{ product.name }}</a></br>
-        {% endfor %}
-{% endblock %}
