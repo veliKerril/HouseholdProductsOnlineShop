@@ -6,9 +6,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600&display=swap" rel="stylesheet">
 	<meta charset="utf-8">
-	<title>Керамика</title>
+	<title>Корзина</title>
 </head>
 <body>
+	<!-- <a><img src="images/menuLines.png"></a> -->
 	<div id="fixed_nav">
 	<div class="badges-menu">
 	<nav class="icon-menu-left">
@@ -23,6 +24,12 @@
 
 	<h1 id="logo_location"><a href="index.html" id="logo_decoration">flaneur</a></h1>
 	
+	<!-- <nav class="menu">
+		<li><a href="chancellery.html">канцелярия</a></li>
+		<li><a href="candles.html">свечи</a></li>
+		<li><a href="ceramics.html">керамика</a></li>
+		<li><a href="contacts.html">контакты</a></li>
+	</nav> -->
 	<nav class="menu">
 		<div class="nav-link-wrapped">
 			<a href="chancellery.html">канцелярия</a>
@@ -38,32 +45,55 @@
 		</div>
 	</nav>
 	</div>
-	<br><br><br>
-	<div id="list-and-catalog">
-		<nav id="list">
-			<li><a id="l1" class="lists-title" href="">Канцелярия</a></li>
-			<li><a id="l2" class="lists-subtitle" href="">Тетради</a></li>
-			<li><a id="l3" class="lists-subtitle" href="">Планеры</a></li>
-			<li><a id="l4" class="lists-subtitle" href="">Открытки</a></li>
-			<li><a id="l5" class="lists-title" href="">Ароматы</a></li>
-			<li><a id="l6" class="lists-subtitle" href="">Свечи</a></li>
-			<li><a id="l7" class="lists-subtitle" href="">Диффузоры</a></li>
-			<li><a id="l8" class="lists-title" href="">Керамика</a></li>
-			<li><a id="l9" class="lists-subtitle" href="">Посуда</a></li>
-			<li><a id="l10" class="lists-subtitle" href="">Вазы</a></li>
-		</nav>
-		<div id="catalog">
-			<div id="sort">Сортировка: по убыванию</div>
-			<div id="catalog1"></div>
-			<div id="catalog2"></div>
-			<div id="catalog3"></div>
-			<div id="catalog4"></div>
-			<div id="catalog5"></div>
-			<div id="catalog6"></div>
-			<div id="catalog7"></div>
-			<div id="catalog8"></div>
-		</div>
+	<div id="current-position-of-order">
+		<div id="current-position-of-order-line"></div>
+
+		<div id="current-position-of-order-card"></div>
+		<p id="current-position-of-order-card-title">Корзина</p>
+		<p id="current-position-of-order-card-1">1</p>
+		<div id="current-position-of-order-ordering"></div>
+		<p id="current-position-of-order-ordering-title">Оформление заказа</p>
+		<p id="current-position-of-order-ordering-2">2</p>
+		<div id="current-position-of-order-payment"></div>
+		<p id="current-position-of-order-payment-title">Оплата</p>
+		<p id="current-position-of-order-payment-3">3</p>
+		<div id="current-position-of-order-finish"></div>
+		<p id="current-position-of-order-finish-title">Завершение</p>
+		<p id="current-position-of-order-finish-4">4</p>
 	</div>
+	<div id="list-of-items">
+			<div id="line1"></div>
+			<div id="item1"></div>
+			<p id="item1-name">Название товара</p>
+			<p id="item1-amount">Количество:</p>
+			<p id="item1-price">Цена</p>
+			<div id="X">
+				<div id="X1"></div>
+				<div id="X2"></div>
+			</div>
+		
+	</div>
+	<div class="textblock-next">
+		<div class="box1">
+			<input type="text" name="index" placeholder="Есть наш промокод?">	
+		</div>
+		<div class="box2">
+			<button>применить</button>	
+		</div>
+		<div class="box3">
+			<p>Сумма заказа:</p>	
+		</div>
+		<div class="box4">
+			<p>Сумма rub</p>	
+		</div>
+		<div class="box5">
+			<form action="ordering.html">
+			<button>перейти к оформлению</button>	
+			</form>
+		</div>
+		
+	</div>
+
 
 	<div class="footer">
 		<div class="delivery-and-payment">
@@ -92,5 +122,7 @@
 		</div>
 </div>
 
+
+	 
 </body>
 </html>
