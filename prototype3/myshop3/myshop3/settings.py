@@ -41,6 +41,8 @@ INSTALLED_APPS = (
     'shop',
     'cart',
 
+    'login',
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',

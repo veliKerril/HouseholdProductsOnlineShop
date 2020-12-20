@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.urls import reverse, path
 from django.contrib import admin
+from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^cart/', include(('cart.urls','cart'), namespace='cart')),
     url(r'^', include(('shop.urls','shop'), namespace='shop')),
     path('accounts/', include('allauth.urls')),
+    path('', TemplateView.as_view(template_name='login/index.html')),
 ]
