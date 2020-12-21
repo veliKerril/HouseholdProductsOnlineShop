@@ -1,40 +1,161 @@
+
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="ru">
 <head>
-
-  {% block title %}<title>Все для дома</title>{% endblock %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <!-- <link href="css/styles1.css" rel="stylesheet" type="text/css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600&display=swap" rel="stylesheet">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+ <!--  {% block title %}<title>Flaneur</title>{% endblock %} -->
+ <title>Flaneur</title>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
   <!-- Добавление дополнительного статического CSS файла-->
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+  
 </head>
 
 <body>
+  <div id="fixed_nav">
+  <div class="badges-menu">
+  <nav class="icon-menu-left">
+    <a href="{% url 'shop:product_list' %}"><img id="menu" class="badges" src="{% static 'images/MenuLines.png' %}"></a>
+    <a href="#lefpanelmenu"><img id="magnifier" class="badges" src="{% static 'images/Magnigier.png' %}"></a>
+  </nav>
+  <nav class="icon-menu-right">
 
-  <div class="container-fluid">
+    <a href="#" id="click-me"><img id="heart" class="badges" src="{% static 'images/account.png' %}"></a>
+    <a href="card.html"><img id="bucket" class="badges" src="{% static 'images/Bucket.png' %}"></a>
+    <div class="user">
+    {% if user.is_authenticated %}
+    <a href="#" id="user">{{ user.get_username }}</a>
+    {% endif %}
+    </div>
+  </nav>
+  </div>
 
+  <h1 id="logo_location"><a href="{% url 'shop:main' %}" id="logo_decoration">flaneur</a></h1>
+  
+  <nav class="menu">
+    <div class="nav-link-wrapped">
+      <a href="#" id="chancellery">канцелярия</a>
+    </div>
+    <div class="nav-link-wrapped">
+      <a href="candles.html">свечи</a>
+    </div>
+    <div class="nav-link-wrapped">
+      <a href="ceramics.html">керамика</a>
+    </div>
+    <div class="nav-link-wrapped">
+      <a href="contacts.html">контакты</a>
+    </div>
+  </nav>
+  </div>
+  <br> <br>
+  <div class="bg-modal">
+    <div class="modal-content">
+      <div class="close">+</div>
+      <div class="enter">
+        <h1>Войти</h1>
+      </div>
+      <div class="input-field2">
+        <form action="">
+        <input type="text" name="lastname" placeholder="e-mail">
+        <input type="text" name="lastname" placeholder="Пароль" >
+        </form>
+        </div>
+        <div class="button-field">
+        <form action="payment-process.html">
+          <button class="button">войти</button>
+        </form>
+      </div>
+        <form action="payment-process.html">
+          <button class="button">зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+  {% block photos-content %}
+  <!-- <div class="categories-photo">
+    <div class="ceramics">
+      <a><img id="ceramics" src="{% static 'images/керамика1.jpg' %}"></a>
+      <div id="ceramics-border-right"></div>
+      <div id="ceramics-border-bottom"></div>
+    </div>
+    <div class="notebooks">
+      <a><img id="notebooks" src="{% static 'images/тетради1.jpg' %}"></a>
+      <div id="notebooks-border-right"></div>
+      <div id="notebooks-border-bottom"></div>
+    </div>
+    <div class="candles">
+      <a><img id="candles" src="{% static 'images/ароматы1.jpg' %}"></a>
+      <div id="candles-border-right"></div>
+      <div id="candles-border-bottom"></div>
+    </div>
+    <div class="planers">
+      <a><img id="planers" src="{% static 'images/планеры1.jpg' %}"></a>
+      <div id="planers-border-right"></div>
+      <div id="planers-border-bottom"></div>
+    </div>
+  </div> -->
+  {% endblock %}
+  <br><br>
+  
+  <div class="footer">
+    <div class="delivery-and-payment">
+      <a id="left-footer-content-delivery" href="#delivery">доставка и оплата</a>
+    </div>
+    <div class="exchange">
+      <a id="left-footer-content-exchange" href="#exchange">обмен и возврат</a>
+    </div>
+    <div class="contacts">
+      <a id="left-footer-content-contacts" href="#contacts">контакты</a>
+    </div>
+    <div class="follow-us">
+      <p id="centre-footer-content-follow-us">follow us</p>
+    </div>  
+    <div class="insta-logo">
+      <a id="instagram"><img src="{% static 'images/instalogo.png' %}" id="centre-footer-content-instagram" width="20" height="20"></a>
+    </div>
+    <div class="news"> 
+      <p id="right-footer-content-news">узнавайте о новинках первыми</p>
+    </div>
+    <div class="e-mail-entering">
+      <input type="text" name="index" placeholder="e-mail">
+    </div>
+    <div class="button-field2">
+      <button class="button2">подписаться</button>
+    </div>
+  </div>
+
+
+  <!-- <div class="container-fluid">
     <div class="row">
       <div class="col-sm-2">
       {% block sidebar %}
 	  <br></br>
       <ul class="sidebar-nav">
-          <li><a href="{% url 'shop:main' %}">Домашняя страница</a></li>
-          <li><a href="{% url 'shop:product_list' %}">Все товары</a></li>
-      </ul>
+           <li><a href="{% url 'shop:main' %}">Домашняя страница</a></li> -->
+          <!-- <li><a href="{% url 'shop:product_list' %}">Все товары</a></li> -->
+      <!-- </ul>
      {% endblock %}
       </div>
       <div class="col-sm-10 ">
       {% block content %}{% endblock %}
       </div>
     </div>
+  </div> --> 
 
-  </div>
 </body>
+<script src="{% static 'function.js' %}"></script>
 </html>
 
 <!-- % url 'index' % -->
