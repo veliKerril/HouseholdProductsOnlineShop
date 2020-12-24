@@ -1,18 +1,38 @@
 {% extends "shop/base.html" %}
 
-{% block content %}
-  <h1>{{ product.name }}</h1>
+{% block details %}
+  <div class="list-and-product-description">
+	
+	<div class="list-of-categories1">
+		<nav id="list1">
+			<li><a id="l11" class="lists-title1" href="">Канцелярия</a></li>
+			<li><a id="l21" class="lists-subtitle1" href="">Тетради</a></li>
+			<li><a id="l31" class="lists-subtitle1" href="">Планеры</a></li>
+			<li><a id="l41" class="lists-subtitle1" href="">Открытки</a></li>
+			<li><a id="l51" class="lists-title1" href="">Ароматы</a></li>
+			<li><a id="l61" class="lists-subtitle1" href="">Свечи</a></li>
+			<li><a id="l71" class="lists-subtitle1" href="">Диффузоры</a></li>
+			<li><a id="l81" class="lists-title1" href="">Керамика</a></li>
+			<li><a id="l91" class="lists-subtitle1" href="">Посуда</a></li>
+			<li><a id="l101" class="lists-subtitle1" href="">Вазы</a></li>
+		</nav>
+	</div>
+	<div class="poduct-img1"></div>
 
-  <p><strong>Наименование товара:</strong> {{ product.name }} </p> 
-  <p><strong>Описание:</strong> {{ product.description }}</p>
-  <p><strong>Цена:</strong> {{ product.price }}</p> 
-  <p><strong>Количество:</strong> {{ product.stock }}</p>
-  
-  <p class="price">{{ product.price }} руб</p>
-<form action="{% url "cart:cart_add" product.id %}" method="post">
-    {{ cart_product_form }}
-    {% csrf_token %}
-    <input type="submit" value="Добавить в корзину">
-</form>
+	<div class="product-decription">
+	    <p class="descr-name">{{ product.name }}</p>
+		<p class="price">{{ product.price }} rub</p>
+		
+		
+		<!-- <p><strong>Количество:</strong> {{ product.stock }}</p> -->
+	  	
+		<form action="{% url "cart:cart_add" product.id %}" method="post">
+	    {{ cart_product_form }}
+	    {% csrf_token %}
+	    	<input class="button2" type="submit" value="Добавить в корзину">
+		</form>
+		<p class="descr">{{ product.description }}</p>
+	</div>
+	</div>
   
 {% endblock %}

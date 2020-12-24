@@ -1045,7 +1045,7 @@ body {
 
 .list-of-categories1 {
 	grid-area: box15;
-	border: 5px solid yellow;
+	/*border: 5px solid yellow;*/
 }
 
 .poduct-img1 {
@@ -1058,7 +1058,6 @@ body {
 
 .product-decription {
 	grid-area: box35;
-	border: 5px solid red;
 }
 
 .descr, .price {
@@ -1089,6 +1088,105 @@ body {
 .list-title1 {
 	padding-left: 50px;
 	list-style-type: none;
-	color: red;
 }
 
+/*#list-and-catalog {
+	width: 100%;
+	height: 1000px;
+
+}
+*/
+#list1 {
+	position: relative;
+	width: 15%;
+	height: 80%;
+	float: left;
+	/*border: 5px solid black;*/
+	list-style-type: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.lists-title1 {
+	font-size: 13px;
+	position: absolute;
+	/*left: 50px;*/
+	left: 190%;
+	color: black;
+	text-decoration: none;
+	/*top: 60px;
+	left: 60px;*/
+}
+
+.lists-subtitle1 {
+	font-size: 13px;
+	position: absolute;
+	/*left: 70px;*/
+	left: 250%;
+	color: black;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+#l11 {
+	position: absolute;
+	top: 0%;
+	/*left: 50px;*/
+}
+
+#l21 {
+	position: absolute;
+	top: 8%;
+	/*left: 50px;*/
+}
+
+#l31 {
+	position: absolute;
+	top: 16%;
+	/*left: 50px;*/
+}
+
+#l41 {
+	position: absolute;
+	top: 24%;
+	/*left: 50px;*/
+}
+
+#l51 {
+	position: absolute;
+	top: 38%;
+	/*left: 50px;*/
+}
+
+#l61 {
+	position: absolute;
+	top: 46%;
+	/*left: 50px;*/
+}
+
+#l71 {
+	position: absolute;
+	top: 250px;
+	top: 54%;
+	/*left: 50px;*/
+}
+
+#l81 {
+	position: absolute;
+	top: 290px;
+	top: 68%;
+	/*left: 50px;*/
+}
+
+#l91 {
+	position: absolute;
+	top:310px;
+	top: 76%;
+	/*left: 50px;*/
+}
+
+#l101 {
+	position: absolute;
+	top: 330px;
+	top: 84%;
+	/*left: 50px;*/
+}
