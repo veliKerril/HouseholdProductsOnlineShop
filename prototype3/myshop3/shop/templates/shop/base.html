@@ -30,8 +30,13 @@
     <a href="#lefpanelmenu"><img id="magnifier" class="badges" src="{% static 'images/Magnigier.png' %}"></a>
   </nav>
   <nav class="icon-menu-right">
-
-    <a href="#" id="click-me"><img id="heart" class="badges" src="{% static 'images/account.png' %}"></a>
+	
+	{% if user.is_authenticated %}
+    <a href="/accounts/logout" id="click-me"><img id="heart" class="badges" src="{% static 'images/account.png' %}"></a>
+	{% else %}
+    <a href="/accounts/login" id="click-me"><img id="heart" class="badges" src="{% static 'images/account.png' %}"></a>
+	{% endif %}
+	
     <a href="{% url 'cart:cart_detail' %}"><img id="bucket" class="badges" src="{% static 'images/Bucket.png' %}"></a>
     <div class="user">
     {% if user.is_authenticated %}
