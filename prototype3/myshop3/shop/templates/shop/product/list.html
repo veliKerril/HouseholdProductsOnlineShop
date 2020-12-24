@@ -1,8 +1,29 @@
 {% extends "shop/base.html" %}
 
-{% block content %}
-    <h1>Список всех продуктов</h1>
+{% block catalog %}
+<div class="list-and-catalog1">
+	<div class="list-of-categories">
+		<nav id="list">
+			<li><a id="l1" class="lists-title" href="">Канцелярия</a></li>
+			<li><a id="l2" class="lists-subtitle" href="">Тетради</a></li>
+			<li><a id="l3" class="lists-subtitle" href="">Планеры</a></li>
+			<li><a id="l4" class="lists-subtitle" href="">Открытки</a></li>
+			<li><a id="l5" class="lists-title" href="">Ароматы</a></li>
+			<li><a id="l6" class="lists-subtitle" href="">Свечи</a></li>
+			<li><a id="l7" class="lists-subtitle" href="">Диффузоры</a></li>
+			<li><a id="l8" class="lists-title" href="">Керамика</a></li>
+			<li><a id="l9" class="lists-subtitle" href="">Посуда</a></li>
+			<li><a id="l10" class="lists-subtitle" href="">Вазы</a></li>
+		</nav>
+	</div>
+    <div class="products-block">
         {% for product in products %}
-                <br><a href="{{ product.get_absolute_url }}">• {{ product.name }}</a></br>
+        	<div class="product-block">
+        		<div class="poduct-img"></div>
+                <a class="product-list" href="{{ product.get_absolute_url }}"> {{ product.name }}</a></br>
+
+            </div>
         {% endfor %}
+    </div>
+</div>
 {% endblock %}

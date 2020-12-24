@@ -464,7 +464,7 @@ body {
 	font-size: 13px;
 	position: absolute;
 	/*left: 50px;*/
-	left: 23%;
+	left: 190%;
 	color: black;
 	text-decoration: none;
 	/*top: 60px;
@@ -475,7 +475,7 @@ body {
 	font-size: 13px;
 	position: absolute;
 	/*left: 70px;*/
-	left: 33%;
+	left: 250%;
 	color: black;
 	list-style-type: none;
 	text-decoration: none;
@@ -484,70 +484,70 @@ body {
 #l1 {
 	position: absolute;
 	top: 110px;
-	top: 5%;
+	top: 0%;
 	/*left: 50px;*/
 }
 
 #l2 {
 	position: absolute;
 	top: 130px;
-	top: 8%;
+	top: 6%;
 	/*left: 50px;*/
 }
 
 #l3 {
 	position: absolute;
 	top: 150px;
-	top: 11%;
+	top: 12%;
 	/*left: 50px;*/
 }
 
 #l4 {
 	position: absolute;
 	top: 170px;
-	top: 14%;
+	top: 18%;
 	/*left: 50px;*/
 }
 
 #l5 {
 	position: absolute;
 	top: 210px;
-	top: 20%;
+	top: 28%;
 	/*left: 50px;*/
 }
 
 #l6 {
 	position: absolute;
 	top: 230px;
-	top: 23%;
+	top: 34%;
 	/*left: 50px;*/
 }
 
 #l7 {
 	position: absolute;
 	top: 250px;
-	top: 26%;
+	top: 40%;
 	/*left: 50px;*/
 }
 
 #l8 {
 	position: absolute;
 	top: 290px;
-	top: 32%;
+	top: 50%;
 	/*left: 50px;*/
 }
 
 #l9 {
 	position: absolute;
 	top:310px;
-	top: 35%;
+	top: 56%;
 	/*left: 50px;*/
 }
 
 #l10 {
 	position: absolute;
 	top: 330px;
-	top: 38%;
+	top: 62%;
 	/*left: 50px;*/
 }
 
@@ -997,3 +997,98 @@ body {
 	transform: rotate(45deg);
 	cursor: pointer;
 }
+
+.product-list {
+	text-decoration: none;
+	color: black;
+	padding-left: 0px;
+	font-size: 13px;
+}
+
+
+
+.products-block {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	/*justify-content: center;*/
+	/*align-items: center;*/
+	/*text-align: center;*/
+	padding-left: 50px;
+
+}
+
+.poduct-img {
+	width: 75%;
+	height: 400px;
+	background: black;
+	/*display: flex;
+  	justify-content: center;
+  	align-items: center;*/
+}
+
+.product-block {
+	/*display: flex;
+  	justify-content: center;
+  	align-items: center;*/
+}
+
+.list-and-catalog1 {
+	display: grid;
+	grid-template-columns: 15% 1fr;
+}
+
+.list-and-product-description {
+	display: grid;
+	grid-template-columns: 15% 1fr 1fr ;
+	grid-template-areas: "box15 box25 box35";
+}
+
+.list-of-categories1 {
+	grid-area: box15;
+	border: 5px solid yellow;
+}
+
+.poduct-img1 {
+	grid-area: box25;
+	
+	height: 300px;
+	width: 150px;
+	border: 5px solid pink;
+}
+
+.product-decription {
+	grid-area: box35;
+	border: 5px solid red;
+}
+
+.descr, .price {
+	font-size: 13px;
+}
+
+/*.descr-name {
+	font-weight: medium;
+}*/
+
+.list1 {
+	display: flex;
+	list-style-type: none;
+	
+}
+
+.list1 li {
+	list-style-type: none;
+}
+
+.lists-title1, .lists-subtitle1 {
+	text-decoration: none;
+	color: black;
+	font-size: 13px;
+	list-style-type: none;
+}
+
+.list-title1 {
+	padding-left: 50px;
+	list-style-type: none;
+	color: red;
+}
+

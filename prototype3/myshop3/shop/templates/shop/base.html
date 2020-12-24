@@ -45,16 +45,16 @@
   
   <nav class="menu">
     <div class="nav-link-wrapped">
-      <a href="#" id="chancellery">канцелярия</a>
+      <a href="{% url 'shop:product_list' %}" id="chancellery">канцелярия</a>
     </div>
     <div class="nav-link-wrapped">
-      <a href="candles.html">свечи</a>
+      <a href="{% url 'shop:product_list' %}">свечи</a>
     </div>
     <div class="nav-link-wrapped">
-      <a href="ceramics.html">керамика</a>
+      <a href="{% url 'shop:product_list' %}">керамика</a>
     </div>
     <div class="nav-link-wrapped">
-      <a href="contacts.html">контакты</a>
+      <a href="{% url 'shop:product_list' %}">контакты</a>
     </div>
   </nav>
   </div>
@@ -83,6 +83,8 @@
     </div>
     </div>
   </div>
+  {% block details %} {% endblock %}
+  {% block catalog %} {% endblock %}
   {% block photos-content %}
   <!-- <div class="categories-photo">
     <div class="ceramics">
