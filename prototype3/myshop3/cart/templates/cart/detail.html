@@ -2,8 +2,54 @@
 {% load static %}
 
 
-{% block content %}
-    <h1>Ваша корзина</h1>
+{% block card %}
+    <div id="current-position-of-order">
+        <div id="current-position-of-order-line"></div>
+
+        <div id="current-position-of-order-card"></div>
+        <p id="current-position-of-order-card-title">Корзина</p>
+        <p id="current-position-of-order-card-1">1</p>
+        <div id="current-position-of-order-ordering"></div>
+        <p id="current-position-of-order-ordering-title">Оформление заказа</p>
+        <p id="current-position-of-order-ordering-2">2</p>
+        <div id="current-position-of-order-payment"></div>
+        <p id="current-position-of-order-payment-title">Оплата</p>
+        <p id="current-position-of-order-payment-3">3</p>
+        <div id="current-position-of-order-finish"></div>
+        <p id="current-position-of-order-finish-title">Завершение</p>
+        <p id="current-position-of-order-finish-4">4</p>
+    </div>
+    <div id="list-of-items">
+            <div id="line1"></div>
+            <div id="item1"></div>
+            <p id="item1-name">Название товара</p>
+            <p id="item1-amount">Количество:</p>
+            <p id="item1-price">Цена</p>
+            <div id="X">
+                <div id="X1"></div>
+                <div id="X2"></div>
+            </div>
+        
+    </div>
+    <div class="textblock-next">
+        <div class="box1">
+            <input type="text" name="index" placeholder="Есть наш промокод?">   
+        </div>
+        <div class="box2">
+            <button>применить</button>  
+        </div>
+        <div class="box3">
+            <p>Сумма заказа:</p>    
+        </div>
+        <div class="box4">
+            <p>Сумма rub</p>    
+        </div>
+        <div class="box5">
+            <form action="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <button>перейти к оформлению</button>   
+            </form>
+        </div>  
+    </div>
 	
     <table class="cart">
         <thead>
