@@ -836,11 +836,9 @@ body {
 	text-align: center;
 }
 
-.box1 {
-	/*background: pink;*/ 
+/*.box1 {
 	grid-area: box1;
 	padding-top: 3px;
-	/*align-items: center;*/
 }
 
 .box1 input {
@@ -849,11 +847,13 @@ body {
 	text-align: center;
 	width: 80%;
 	height: 17%;
-}
+}*/
 
 .box2 {
 	/*background: violet;*/
 	grid-area: box2;
+	text-align: left;
+	padding-left: 20%;
 }
 
 .box3 {
@@ -886,9 +886,9 @@ body {
 	font-size: 12px;
 }
 
-.box2 button {
+/*.box2 button {
 	padding: 14px 20px 14px 20px;
-}
+}*/
 
 #textblock-next-promocode{
 	/*background: pink;*/
@@ -1190,3 +1190,5 @@ body {
 	top: 84%;
 	/*left: 50px;*/
 }
+
+

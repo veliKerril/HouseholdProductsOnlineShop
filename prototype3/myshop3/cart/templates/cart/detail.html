@@ -38,11 +38,13 @@
             {% endwith %}
         {% endfor %}
     <div class="textblock-next">
-        <div class="box1">
+        <!-- <div class="box1">
             <input type="text" name="index" placeholder="Есть наш промокод?">   
-        </div>
-        <div class="box2">
-            <button>продолжить покупки</button>  
+        </div> -->
+        <div class="box2" >
+            <form action="{% url 'shop:product_list' %}">
+            <button class="button-additional">продолжить покупки</button>  
+            </form>
         </div>
         <div class="box3">
             <p>Сумма заказа:</p>    
@@ -59,10 +61,5 @@
 	
     
 	
-	<table>
-		<tr>
-            <th width="180"><a href="{% url "shop:product_list" %}" class="button light">Продолжить покупки</a></th>
-            
-        </tr>
-	</table>
+	
 {% endblock %}
