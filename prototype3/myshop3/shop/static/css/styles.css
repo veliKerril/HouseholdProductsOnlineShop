@@ -830,9 +830,9 @@ body {
 .textblock-next {
 	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 25vh;
-	grid-template-areas: ". box1 box2 box3 box4 box5 .";
+	grid-template-areas: ". box2 box3 box4 box5 .";
 	text-align: center;
 }
 

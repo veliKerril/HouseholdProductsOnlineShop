@@ -19,30 +19,36 @@
         <p id="current-position-of-order-finish-title">Завершение</p>
         <p id="current-position-of-order-finish-4">4</p>
     </div>
-    <div id="list-of-items">
-            <div id="line1"></div>
-            <div id="item1"></div>
-            <p id="item1-name">Название товара</p>
-            <p id="item1-amount">Количество:</p>
-            <p id="item1-price">Цена</p>
-            <div id="X">
-                <div id="X1"></div>
-                <div id="X2"></div>
-            </div>
-        
-    </div>
+    {% for item in cart %}
+            {% with product=item.product %}
+                <div id="list-of-items">
+                    <div id="line1"></div>
+                    <div id="item1"></div>
+                    <p id="item1-name">{{ product.name }}</p>
+                    <p id="item1-amount">Количество: {{ item.quantity }}</p>
+                    <p id="item1-price">{{ item.price }} rub</p>
+                    <div id="X">
+                        <a href="{% url "cart:cart_remove" product.id%}">
+                        <div id="X1"></div>
+                        <div id="X2"></div>
+                        </a>
+                    </div>  
+                </div>
+                
+            {% endwith %}
+        {% endfor %}
     <div class="textblock-next">
         <div class="box1">
             <input type="text" name="index" placeholder="Есть наш промокод?">   
         </div>
         <div class="box2">
-            <button>применить</button>  
+            <button>продолжить покупки</button>  
         </div>
         <div class="box3">
             <p>Сумма заказа:</p>    
         </div>
         <div class="box4">
-            <p>Сумма rub</p>    
+            <p>{{ cart.get_total_price }} rub</p>    
         </div>
         <div class="box5">
             <form action="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
@@ -51,41 +57,12 @@
         </div>  
     </div>
 	
-    <table class="cart">
-        <thead>
-        <tr>
-            <th width="200">Товар</th>
-            <th width="200">Количество</th>
-            <th width="200">Убрать из корзины</th>
-            <th width="200">Цена за штуку</th>
-            <th width="200">Итоговая цена</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for item in cart %}
-            {% with product=item.product %}
-                <tr>
-                    <td width="200">{{ product.name }}</td>
-                    <td width="200">{{ item.quantity }}</td>
-                    <td width="200"><a href="{% url "cart:cart_remove" product.id%}">Удалить</a></td>
-                    <td class="num",  width="200">{{ item.price }} руб</td>
-                    <td class="num",  width="200">{{ item.total_price }} руб</td>
-                </tr>
-            {% endwith %}
-        {% endfor %}
-        <tr class="total">
-		
-            <td>Итого</td>
-            <td colspan="3"></td>
-            <td class="num">{{ cart.get_total_price }} руб</td>
-        </tr>
-        </tbody>
-    </table>
+    
 	
 	<table>
 		<tr>
             <th width="180"><a href="{% url "shop:product_list" %}" class="button light">Продолжить покупки</a></th>
-            <th width="180"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PLahKLy8pQdCM0SiXNn3EfGIXX19QGzUG3&ab_channel=RickAstleyVEVO" class="button">Оплатить</a></th>
+            
         </tr>
 	</table>
 {% endblock %}
