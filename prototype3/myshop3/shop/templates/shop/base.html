@@ -40,7 +40,7 @@
     <a href="{% url 'cart:cart_detail' %}"><img id="bucket" class="badges" src="{% static 'images/Bucket.png' %}"></a>
     <div class="user">
     {% if user.is_authenticated %}
-    <a href="#" id="user">{{ user.get_username }}</a>
+    <a href="#" id="user">{{ user.first_name }}</a>
     {% endif %}
     </div>
   </nav>
