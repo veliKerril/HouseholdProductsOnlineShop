@@ -1,11 +1,10 @@
-<p>Заказы пользователя {{ order_item.order.first_name }} </p>
-{% if order_item.order.email == user.email %}
-	
-		{% for order_item in orders_item %}
-			<p>{{ order_item.product }}</p>
-		{% endfor %}
-{% endif %}
+<p>Заказы пользователя {{ name_of_orders }} </p>
 
 {% for order_item in orders_item %}
-	<p>{{ order_item.product }}</p>
+	{% if order_item.order.email == user.email %}
+		<p>{{ order_item.product }} + {{ order_item.quantity }}</p>
+	{% endif %}
 {% endfor %}
+
+
+

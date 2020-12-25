@@ -55,5 +55,7 @@ def product_detail(request, id, slug):
 def show_orders(request):
     orders = Order.objects.all()
     orders_item = OrderItem.objects.all()
+    name_of_orders = request.user.first_name
+
     return render(request, 'shop/product/orders.html', {'orders': orders, 'orders_item': orders_item,
-                                                        })
+                                                        'name_of_orders': name_of_orders})
