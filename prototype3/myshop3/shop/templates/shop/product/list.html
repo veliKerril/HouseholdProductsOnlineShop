@@ -19,9 +19,12 @@
     <div class="products-block">
         {% for product in products %}
         	<div class="product-block">
+        		<a class="product-list" href="{{ product.get_absolute_url }}">
         		<div class="poduct-img"><img src="{% if product.main_image %}{{ product.main_image.url }}{% endif %}" height="400px" width="100%"></div>
-                <a class="product-list" href="{{ product.get_absolute_url }}"> {{ product.name }}</a></br>
-
+                <p>{{ product.name }}</p>
+                <p class="price">{{ product.price }} rub</p>
+                </a>
+                </br>
             </div>
         {% endfor %}
     </div>
