@@ -129,6 +129,10 @@ AUTHENTICATION_BACKENDS = (
 
 )
 
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 SITE_ID = 1
 
 MEDIA_URL = '/media/'
