@@ -88,34 +88,15 @@
     </div>
     </div>
   </div> -->
+
+  {% block signup %} {% endblock %}
   {% block login %} {% endblock %}
   {% block logout %} {% endblock %}
   {% block card %} {% endblock %}
   {% block details %} {% endblock %}
   {% block catalog %} {% endblock %}
   {% block photos-content %}
-  <!-- <div class="categories-photo">
-    <div class="ceramics">
-      <a><img id="ceramics" src="{% static 'images/керамика1.jpg' %}"></a>
-      <div id="ceramics-border-right"></div>
-      <div id="ceramics-border-bottom"></div>
-    </div>
-    <div class="notebooks">
-      <a><img id="notebooks" src="{% static 'images/тетради1.jpg' %}"></a>
-      <div id="notebooks-border-right"></div>
-      <div id="notebooks-border-bottom"></div>
-    </div>
-    <div class="candles">
-      <a><img id="candles" src="{% static 'images/ароматы1.jpg' %}"></a>
-      <div id="candles-border-right"></div>
-      <div id="candles-border-bottom"></div>
-    </div>
-    <div class="planers">
-      <a><img id="planers" src="{% static 'images/планеры1.jpg' %}"></a>
-      <div id="planers-border-right"></div>
-      <div id="planers-border-bottom"></div>
-    </div>
-  </div> -->
+  
   {% endblock %}
   <br><br>
   
@@ -133,7 +114,7 @@
       <p id="centre-footer-content-follow-us">follow us</p>
     </div>  
     <div class="insta-logo">
-      <a id="instagram"><img src="{% static 'images/instalogo.png' %}" id="centre-footer-content-instagram" width="20" height="20"></a>
+      <a href="https://www.instagram.com/chernykh.julia/" id="instagram"><img src="{% static 'images/instalogo.png' %}" id="centre-footer-content-instagram" width="20" height="20"></a>
     </div>
     <div class="news"> 
       <p id="right-footer-content-news">узнавайте о новинках первыми</p>
