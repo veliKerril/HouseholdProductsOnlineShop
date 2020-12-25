@@ -57,14 +57,12 @@
             <p>{{ cart.get_total_price }} rub</p>    
         </div>
         <div class="box5">
-            <form action="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <form action="{% url 'orders:order_create' %}">
             <button>перейти к оформлению</button>   
             </form>
         </div>
 		
-		<a href="{% url "orders:order_create" %}" class="button">
-			Checkout
-		</a>
+		
     </div>
 	
     
