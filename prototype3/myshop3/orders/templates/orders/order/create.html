@@ -18,7 +18,13 @@
         <p id="current-position-of-order-finish-4">4</p>
     </div>
     <br><br><br><br><br>
+
     <div class="ordering-info">
+        <form action="." method="post" class="order-form">
+        {{ form.as_p }}
+        <p><input type="submit" value="Place order"></p>
+        {% csrf_token %}
+        </form>
         <div class="text-field" id="first-text-field">
             <p>Данные для доставки</p>
         </div>
@@ -76,11 +82,7 @@
     
 	
 	
-    <form action="." method="post" class="order-form">
-        {{ form.as_p }}
-        <p><input type="submit" value="Place order"></p>
-        {% csrf_token %}
-    </form>
+    
 	
 	
 {% endblock %}

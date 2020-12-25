@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
+from orders.models import Order, OrderItem
 from cart.forms import CartAddProductForm
 
 
@@ -49,3 +50,12 @@ def product_detail(request, id, slug):
     cart_product_form = CartAddProductForm()
     return render(request, 'shop/product/detail.html', {'product': product,
                                                         'cart_product_form': cart_product_form})
+
+
+def show_orders(request):
+    orders = Order.objects.all()
+    orders_item = OrderItem.objects.all()
+    name_of_orders = request.user.first_name
+
+    return render(request, 'shop/product/orders.html', {'orders': orders, 'orders_item': orders_item,
+                                                        'name_of_orders': name_of_orders})

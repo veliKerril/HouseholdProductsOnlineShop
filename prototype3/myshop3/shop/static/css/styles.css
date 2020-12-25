@@ -1275,3 +1275,10 @@ body {
 	font-weight: bold;
 	font-size: 12px;
 }
+
+.order-form p {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	width: 100%;
+	height: 100%;
+}
