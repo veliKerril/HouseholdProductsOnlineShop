@@ -1206,4 +1206,48 @@ body {
 	/*left: 50px;*/
 }
 
+.login-page {
+	text-align: center;
+}
 
+.login-page a:not(.button-secondaryAction) {
+	text-decoration: none;
+	color: black;
+}
+
+/*.aaa, .aaa2 {
+	text-decoration: none;
+	color: black;
+}*/
+
+.primaryAction {
+	width: 164px;
+	color: white;
+	background-color: black;
+	text-decoration: none;
+	border: none;
+	padding: 15px 20px 15px 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.button-secondaryAction {
+	width: 164px;
+	color: white;
+	background-color: black;
+	text-decoration: none;
+	border: none;
+	padding: 15px 20px 15px 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+/*.login input {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	width: 16%;
+	margin: 15px auto;
+	height: 30%;
+}*/
