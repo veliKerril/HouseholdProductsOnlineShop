@@ -1018,15 +1018,9 @@ body {
 }
 
 .poduct-img {
-	width: 75%;
+	width: 85%;
 	height: 400px;
-	background: black;
-	/*display: flex;
-  	justify-content: center;
-  	align-items: center;*/
-}
-
-.product-block {
+	/*background: red;*/
 	/*display: flex;
   	justify-content: center;
   	align-items: center;*/
@@ -1045,7 +1039,12 @@ body {
 
 .list-of-categories1 {
 	grid-area: box15;
+	height: 50vh;
 	/*border: 5px solid yellow;*/
+}
+
+.img-detail {
+    padding-left: 8%;
 }
 
 .poduct-img1 {
@@ -1071,6 +1070,7 @@ body {
 .list1 {
 	display: flex;
 	list-style-type: none;
+
 	
 }
 
