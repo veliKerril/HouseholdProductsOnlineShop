@@ -17,8 +17,8 @@
 			<li><a id="l101" class="lists-subtitle1" href="">Вазы</a></li>
 		</nav>
 	</div>
-<!--	  	<img src="{% if product.main_image %}{{ product.main_image.url }}{% endif %}">-->
-		<img class="img-detail" src="{% if product.detail_image %}{{ product.detail_image.url }}{% endif %}" width="80%">
+		
+	<img class="img-detail" src="{% if product.detail_image %}{{ product.detail_image.url }}{% endif %}" width="80%">
 
 	<div class="product-decription">
 	    <p class="descr-name">{{ product.name }}</p>
@@ -26,12 +26,21 @@
 		
 		
 		<!-- <p><strong>Количество:</strong> {{ product.stock }}</p> -->
-	  	
+	  	{% if user.is_authenticated %}
 		<form action="{% url 'cart:cart_add' product.id %}" method="post">
 	    {{ cart_product_form }}
 	    {% csrf_token %}
 	    	<input class="button2" type="submit" value="Добавить в корзину">
 		</form>
+		{% else %}
+		<form action="/accounts/login" method="get">
+	    {{ cart_product_form }}
+	    {% csrf_token %}
+	    	<input class="button2" type="submit" value="Добавить в корзину">
+		</form>
+		{% endif %}
+		
+		
 		<p class="descr">{{ product.description }}</p>
 	</div>
 	</div>
