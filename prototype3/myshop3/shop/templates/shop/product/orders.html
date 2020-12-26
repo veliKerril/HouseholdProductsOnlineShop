@@ -4,10 +4,17 @@
 	<h3>Заказы пользователя {{ name_of_orders }} </h3>
 
 	{% for order_item in orders_item %}
-		{% if order_item.order.email == user.email %}
-			<p>{{ order_item.product }} + {{ order_item.quantity }}</p>
-		{% endif %}
-	{% endfor %}
+	
+	{% if order_item.order.email == user.email %}
+		<p>Заказ {{ order_item.order.id }}</p>
+		<p>Дата и время: {{ order_item.order.created }}</p>
+		<p>Статус: {{ paid }}</p>
+	{% endif %}
+	
+	{% if order_item.order.email == user.email %}
+		<p>{{ order_item.product }} + {{ order_item.quantity }}</p>
+	{% endif %}
+{% endfor %}
 </div>
 {% endblock %}
 
