@@ -1,6 +1,26 @@
 {% extends "shop/base.html" %}
 {% block created %}
-    <h1>Thank you</h1>
-    <p>Your order has been successfully completed. Your order number is
+	<div id="current-position-of-order">
+        <div id="current-position-of-order-line"></div>
+
+        <div id="current-position-of-order-card"></div>
+        <p id="current-position-of-order-card-title">Корзина</p>
+        <p id="current-position-of-order-card-1">1</p>
+        <div id="current-position-of-order-ordering"></div>
+        <p id="current-position-of-order-ordering-title">Оформление заказа</p>
+        <p id="current-position-of-order-ordering-2">2</p>
+        <div id="current-position-of-order-payment"></div>
+        <p id="current-position-of-order-payment-title">Оплата</p>
+        <p id="current-position-of-order-payment-3">3</p>
+        <div id="current-position-of-order-finish"></div>
+        <p id="current-position-of-order-finish-title">Завершение</p>
+        <p id="current-position-of-order-finish-4">4</p>
+    </div>
+    <br><br><br>
+    <div class="successful-ordering">
+    	<h1>Спасибо за ваш заказ</h1>
+    	<p>Ваш заказ был успешно оформлен. Номер вашего заказа:
         <strong>{{ order.id }}</strong>.</p>
+    </div>
+    <br><br><br><br>
 {% endblock %}
