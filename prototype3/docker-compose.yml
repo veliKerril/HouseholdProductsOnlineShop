@@ -8,10 +8,10 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
   web:
-    build: .
+    build: https://github.com/veliKerril/HouseholdProductsOnlineShop.git#master:prototype3
     command: python3 "myshop3/manage.py" runserver 0.0.0.0:8000
     volumes:
-      - .:/prototype3
+      - .:/myshop3
     ports:
       - "8000:8000"
     depends_on:
