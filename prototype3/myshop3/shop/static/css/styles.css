@@ -914,7 +914,7 @@ body {
 	/*text-align: center;*/
 	font-size: 18px;
 	display: flex;
-	justify-content: space-around;
+	/*justify-content: space-around;*/
 	align-items: center;
 	flex-direction: column;
 }
@@ -1276,9 +1276,21 @@ body {
 	font-size: 12px;
 }
 
-.order-form p {
+.order-form-first-name input {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 	width: 100%;
 	height: 100%;
 }
+
+.order-form input {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	width: 100%;
+	height: 100%;
+}
+
+.input-field input {
+	height: 30px;
+}
+

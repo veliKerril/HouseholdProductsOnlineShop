@@ -17,30 +17,40 @@
         <p id="current-position-of-order-finish-title">Завершение</p>
         <p id="current-position-of-order-finish-4">4</p>
     </div>
-    <br><br><br><br><br>
 
     <div class="ordering-info">
-        <form action="." method="post" class="order-form">
-        {{ form.as_p }}
-        <p><input type="submit" value="Place order"></p>
-        {% csrf_token %}
-        </form>
+    
+
         <div class="text-field" id="first-text-field">
             <p>Данные для доставки</p>
         </div>
+
         <div class="input-field">
+            <form action="." method="post" class="order-form">
+                {{ form.as_p }}
+            </form>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <form action="." method="post" class="order-form">
+            <div class="button-field" id="padd">
+                <p><input type="submit" value="Оформить заказ" class="button"></p>
+            </div>
+            {% csrf_token %}
+        </form>
+
+        <!-- <div class="input-field">
             <input type="text" name="lastname" placeholder="Фамилия" size="30">
             
         </div>
         <div class="input-field">
             <input type="text" name="firstname" placeholder="Имя" size="30">
         </div>
-        <!-- <div class="input-field">
+        <div class="input-field">
             <input type="text" name="patronymic" placeholder="Отчество" size="30">
-        </div> -->
-        <!-- <div class="input-field">
+        </div> 
+         <div class="input-field">
             <input type="text" name="phone number" placeholder="Номер телефона" size="30">
-        </div> -->
+        </div> 
         <div class="input-field">
             <input type="text" name="e-mail" placeholder="E-mail" size="30">
         </div>
@@ -65,18 +75,18 @@
         <div class="input-field">
             <input type="text" name="index" placeholder="Индекс" size="30">
         </div>
-        <!-- <div class="text-field">
+        <div class="text-field">
             <p>Способ доставки</p>
         </div>
         <div class="input-field">
             <input type="text" name="region" placeholder="Регион" size="30">
-        </div> -->
+        </div> 
         <div class="button-field">
             <form action="payment-process.html">
 
             <button class="button">Оформить заказ</button>
             </form>
-        </div>
+        </div> -->
     </div>
 
     
