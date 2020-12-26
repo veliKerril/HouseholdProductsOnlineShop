@@ -1294,3 +1294,6 @@ body {
 	height: 30px;
 }
 
+#padd input {
+	padding-bottom: 30px;
+}

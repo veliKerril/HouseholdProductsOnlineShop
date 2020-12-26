@@ -28,15 +28,17 @@
         <div class="input-field">
             <form action="." method="post" class="order-form">
                 {{ form.as_p }}
+                <div class="button-field" id="padd">
+                <p><input type="submit" value="Оформить заказ" class="button"></p>
+                </div>
+                {% csrf_token %}
             </form>
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br>
         <form action="." method="post" class="order-form">
-            <div class="button-field" id="padd">
-                <p><input type="submit" value="Оформить заказ" class="button"></p>
-            </div>
-            {% csrf_token %}
+            
         </form>
+
 
         <!-- <div class="input-field">
             <input type="text" name="lastname" placeholder="Фамилия" size="30">
