@@ -15,4 +15,12 @@ class OrderCreateForm(forms.ModelForm):
             "postal_code": "",
             "city": "",
         }
+        widgets = {
+            'first_name': forms.TextInput(attrs={'placeholder': 'Имя'}),
+            'last_name': forms.TextInput(attrs={'placeholder': 'Фамилия'}),
+            'email' : forms.TextInput(attrs={'placeholder': 'E-mail'}),
+            'address' : forms.TextInput(attrs={'placeholder': 'Адрес'}),
+            'postal_code' : forms.TextInput(attrs={'placeholder': 'Индекс'}),
+            'city' : forms.TextInput(attrs={'placeholder': 'Город'})
+        }
 
