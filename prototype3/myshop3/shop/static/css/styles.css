@@ -1304,4 +1304,26 @@ body {
 	align-items: center;
 	flex-direction: column;
 }
-	
+
+.orders {
+	padding-top: 50px;
+	display: flex;
+	/*justify-content: space-around;*/
+	align-items: center;
+	flex-direction: column;
+	height:40vh;
+}
+
+.link {
+	text-decoration: none;
+	color: black;
+}
+
+.icon-menu-right a:hover{
+	color: #848484;
+}
+
+.icon-menu-right a {
+	color: black;
+}
+

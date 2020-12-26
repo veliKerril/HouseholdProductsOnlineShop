@@ -1,10 +1,15 @@
-<p>Заказы пользователя {{ name_of_orders }} </p>
+{% extends "shop/base.html" %}
+{% block orders %}
+<div class="orders">
+	<h3>Заказы пользователя {{ name_of_orders }} </h3>
 
-{% for order_item in orders_item %}
-	{% if order_item.order.email == user.email %}
-		<p>{{ order_item.product }} + {{ order_item.quantity }}</p>
-	{% endif %}
-{% endfor %}
+	{% for order_item in orders_item %}
+		{% if order_item.order.email == user.email %}
+			<p>{{ order_item.product }} + {{ order_item.quantity }}</p>
+		{% endif %}
+	{% endfor %}
+</div>
+{% endblock %}
 
 
 
