@@ -5,7 +5,17 @@ from cart.forms import CartAddProductForm
 
 
 def main(request):
-    return render(request, 'shop/product/index.html')
+    category = None
+    num_goods = Product.objects.all().count()
+    num_categories = Category.objects.all().count()
+    num_manufacturer = 0
+    num_goods_available = Product.objects.filter(available=True).count()
+    return render(request,
+                  'shop/product/index.html',
+                  {'num_goods': num_goods,
+                   'num_categories': num_categories,
+                   'num_manufacturer': num_manufacturer,
+                   'num_goods_available': num_goods_available})
 
 
 def product_list(request, category_slug=None):
@@ -14,7 +24,7 @@ def product_list(request, category_slug=None):
     products = Product.objects.filter(available=True)
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
-        products = products.filter(category_id=category)
+        products = products.filter(category=category)
     return render(request,
                   'shop/product/list.html',
                   {'category': category,
